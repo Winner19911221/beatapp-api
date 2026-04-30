@@ -1,10 +1,14 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 
+const PORT = process.env.PORT || 3000;
+
 app.get('/', (req, res) => {
-  res.send('Servidor funcionando 🚀');
+  res.send('API funcionando ??');
 });
 
-app.listen(3000, () => {
-  console.log('http://localhost:3000');
+app.listen(PORT, '0.0.0.0', () => {
+  console.log('Servidor corriendo en puerto ' + PORT);
 });
